@@ -491,13 +491,16 @@ input:focus-visible + .tick{outline:2.5px solid var(--accent);outline-offset:3px
 .install-btn{white-space:nowrap}
 @media(max-width:719px){
   .topbar{-webkit-backdrop-filter:none;backdrop-filter:none;background:var(--bg)}
-  .tabs{position:fixed;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:45;margin:0;justify-content:space-between;background:color-mix(in oklab,var(--surface) 88%,transparent);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--line);box-shadow:var(--shadow-lg)}
-  .tab{flex:1;justify-content:center;flex-direction:column;gap:2px;padding:7px 4px;font-size:.72rem}
+  .tabs{position:fixed;left:0;right:0;bottom:0;z-index:45;margin:0;justify-content:space-between;border-radius:0;padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px));background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -8px 24px -18px rgba(0,0,0,.35)}
+  .tabs-pill{border-radius:14px;box-shadow:none;background:var(--bg-2)}
+  .tab{flex:1;justify-content:center;flex-direction:column;gap:2px;padding:7px 4px;border-radius:14px;font-size:.72rem}
   .theme-btn{margin-left:auto}
-  body{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}
-  .wz-nav{bottom:calc(76px + env(safe-area-inset-bottom,0px))!important}
-  #toast{bottom:calc(92px + env(safe-area-inset-bottom,0px))!important}
-  body.in-wizard #toast{bottom:calc(170px + env(safe-area-inset-bottom,0px))!important}
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  body.in-wizard{padding-bottom:calc(152px + env(safe-area-inset-bottom,0px))}
+  .wz-nav{position:fixed!important;left:0;right:0;bottom:calc(62px + env(safe-area-inset-bottom,0px))!important;z-index:44;margin:0!important;padding:12px 16px!important;border-radius:0!important;background:var(--surface)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border-top:1px solid var(--line)}
+  .wz-main{padding-bottom:clamp(20px,4vw,40px)}
+  #toast{bottom:calc(84px + env(safe-area-inset-bottom,0px))!important}
+  body.in-wizard #toast{bottom:calc(156px + env(safe-area-inset-bottom,0px))!important}
   .install-btn span{display:none}
 }
 .btn-sm{--h:38px;padding:0 .95rem;font-size:.86rem}

@@ -554,7 +554,7 @@ function showWizard() {
   $("#view").innerHTML = "";
   closeObservers();
   const pane = updateWizard(0);
-  enter([$(".wz-side"), $(".wz-main")], { y: 22, step: 90, dur: 700 });
+  enter([$(".wz-side"), $(".wz-head"), $("#stage")], { y: 22, step: 90, dur: 700 });
   return pane;
 }
 function generate() {
